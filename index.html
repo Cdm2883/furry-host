@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Monoton&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --text-color: #ebe9eb;
+            --background-color: #262526;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            color: var(--text-color);
+            background: var(--background-color);
+            overflow: hidden;
+        }
+
+        .container h1 {
+            font-family: "Monoton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            position: absolute;
+            top: -9vw;
+            left: -1vw;
+            font-size: 25vw;
+        }
+        .container h2 {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            position: absolute;
+            top: 1vw;
+            left: -2.25vw;
+            font-size: 60vw;
+            clip-path: inset(22% 0 0 0);
+        }
+
+        .container .cover {
+            --alpha: 0%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, var(--alpha));
+        }
+
+        .cover .desc {
+            font-family: "Noto Sans SC", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1rem;
+            font-size: 2rem;
+        }
+        .cover .desc b {
+            font-style: normal;
+            clip-path: inset(22% 0 10% 0);
+            color: var(--background-color);
+            background: var(--text-color);
+        }
+
+        .cover img {
+            position: absolute;
+            right: -15px;
+            bottom: -25px;
+            height: 80vh;
+            /* 不仔细看不出来( */
+            filter: contrast(.71);
+            /*filter: url(#colorFilter);*/
+            /*filter: drop-shadow(0 0 100px #000);*/
+        }
+        .cover .question-mark {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            position: absolute;
+            bottom: 8vh;
+            right: 15vh;
+            font-size: 22vh;
+        }
+    </style>
+    <style>
+
+        .cordon {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+            left: 0;
+            top: 0;
+
+            opacity: 1;
+            transition: opacity .2s ease-in-out;
+        }
+
+        .cordon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(transparent, transparent, #0005, #0004);
+            z-index: 10000;
+            pointer-events: none;
+        }
+
+        .cordon:has(.scroll:hover) {
+            opacity: 0;
+        }
+
+        .scroll {
+            width: calc(100% + 400px);
+            left: -400px;
+            display: flex;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+            transform: rotate(calc(var(--d) * 1deg)) translateY(calc(var(--y) * 1px));
+        }
+
+        .scroll div {
+            background: #e9c804;
+            color: #1d1104;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            white-space: nowrap;
+            animation: animate 80s linear infinite;
+            animation-delay: -80s;
+        }
+
+        .scroll div:nth-child(2) {
+            animation: animate-two 80s linear infinite;
+            animation-delay: -40s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes animate-two {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+    </style>
+    <title>FURRY HOST</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>FURRY</h1>
+    <h2>HOST</h2>
+    <div class="cover">
+        <img src="assets/img/silhouette.png" alt="silhouette"/>
+        <p class="question-mark">?</p>
+        <p class="desc"></p>
+    </div>
+
+    <div class="cordon">
+        <div class="scroll" style="--d:25;--y:200;">
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+        </div>
+        <div class="scroll" style="--d:-25;--y:400;">
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+        </div>
+        <div class="scroll" style="--d:15;--y:500;">
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+        </div>
+        <div class="scroll" style="--d:-5;--y:50;">
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+        </div>
+        <div class="scroll" style="--d:-15;--y:-350;">
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+            <div>
+                <span>暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 - 暂未开放 - 施工中 -</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<svg style="display: none">-->
+<!--    <defs>-->
+<!--        <filter id="colorFilter">-->
+<!--            <feColorMatrix-->
+<!--                    color-interpolation-filters="sRGB"-->
+<!--                    type="matrix"-->
+<!--                    values="-->
+<!--                        0.15 0     0     0   0.15-->
+<!--                        0    0.16  0     0   0.16-->
+<!--                        0    0     0.18  0   0.18-->
+<!--                        0    0     0     1   0-->
+<!--                    "/>-->
+<!--        </filter>-->
+<!--    </defs>-->
+<!--</svg>-->
+
+<script>
+    let cover = document.querySelector(".container .cover")
+    let coverAlpha = () => cover.style.setProperty("--alpha", `${
+        Math.max(0, window.innerWidth - window.innerHeight - (window.innerWidth * .2)) * .002}
+    `)
+    coverAlpha()
+    window.addEventListener("resize", coverAlpha)
+</script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    // noinspection JSUnresolvedReference
+    new Typed(".cover .desc", {
+        stringsElement: '#typed-strings',
+        strings: [
+            '免费个兽<b>信息托管</b>',
+            '免费<b>设计&amp;开发</b>托管网页',
+            '免费兽兽<b>专属二级域名',
+            '限量<b>@furry.host</b>邮箱'
+        ],
+        typeSpeed: 50,
+        backSpeed: 20,
+        backDelay: 2000,
+        startDelay: 1000,
+        loop: true,
+        smartBackspace: true
+    });
+</script>
+
+<script>
+    let contact = () =>
+        prompt(
+            `网站施工中! 若想提前体验, 请联系:`,
+            `邮箱: kawulf@furry.host 或 QQ: 1759370644`
+        )
+    document.addEventListener("dblclick", contact)
+    setTimeout(contact, 1000 * 30)
+</script>
+
+</body>
+</html>
