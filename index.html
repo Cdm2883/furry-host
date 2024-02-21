@@ -74,10 +74,10 @@
             bottom: 1.5rem;
             left: 1rem;
             font-size: 2rem;
+            clip-path: inset(22% 0 10% 0);
         }
         .cover .desc b {
             font-style: normal;
-            clip-path: inset(22% 0 10% 0);
             color: var(--background-color);
             background: var(--text-color);
         }
@@ -188,7 +188,9 @@
     <div class="cover">
         <img src="assets/img/silhouette.png" alt="silhouette"/>
         <p class="question-mark">?</p>
-        <p class="desc"></p>
+        <p class="desc">
+            <span class="typed-strings"></span>
+        </p>
     </div>
 
     <div class="cordon">
@@ -264,8 +266,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
     // noinspection JSUnresolvedReference
-    new Typed(".cover .desc", {
-        stringsElement: '#typed-strings',
+    new Typed(".cover .desc .typed-strings", {
         strings: [
             '免费个兽<b>信息托管</b>',
             '免费<b>设计&amp;开发</b>托管网页',
